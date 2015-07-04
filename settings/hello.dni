@@ -1,0 +1,51 @@
+[Stack]
+FillEnabled=0
+OverflowWarningsEnabled=1
+WarningThreshold=90
+SpWarningsEnabled=1
+WarnLogOnly=1
+UseTrigger=1
+TriggerName=main
+LimitSize=0
+ByteLimit=50
+[LMIFTDIDriver]
+LMI_ResetMode=0x00000000
+[DebugChecksum]
+Checksum=-151839736
+[Exceptions]
+StopOnUncaught=_ 0
+StopOnThrow=_ 0
+[CallStack]
+ShowArgs=0
+[Disassembly]
+MixedMode=1
+[watch_formats]
+Fmt0={W}0:u16data	4	0
+[Log file]
+LoggingEnabled=_ 0
+LogFile=_ ""
+Category=_ 0
+[TermIOLog]
+LoggingEnabled=_ 0
+LogFile=_ ""
+[DriverProfiling]
+Enabled=0
+Mode=0
+Graph=0
+Symbiont=0
+Exclusions=
+[Disassemble mode]
+mode=0
+[Breakpoints]
+Bp0=_ "STD_CODE" "{$PROJ_DIR$\hello.c}.322.1" 0 0 0 0 "" 0 ""
+Bp1=_ "STD_CODE" "{$PROJ_DIR$\hello.c}.322.1" 0 0 0 0 "" 0 ""
+Bp2=_ "STD_CODE" "{$PROJ_DIR$\hello.c}.322.1" 0 0 0 0 "" 0 ""
+Bp3=_ "STD_CODE" "{$PROJ_DIR$\hello.c}.304.5" 1 0 0 0 "" 0 ""
+Count=4
+[Aliases]
+A0=_ "C:\DriverLib\build\DriverLib.test\driverlib\gpio.c" ""
+A1=_ "C:\DriverLib\build\DriverLib.test\driverlib\i2c.c" ""
+A2=_ "C:\DriverLib\build\DriverLib.test\driverlib\sysctl.c" ""
+A3=_ "C:\DriverLib\build\DriverLib.test\driverlib\uart.c" ""
+Count=4
+SuppressDialog=1

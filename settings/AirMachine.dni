@@ -1,0 +1,89 @@
+[DebugChecksum]
+Checksum=-1077497040
+[Exceptions]
+StopOnUncaught=_ 0
+StopOnThrow=_ 0
+[Stack]
+FillEnabled=0
+OverflowWarningsEnabled=1
+WarningThreshold=90
+SpWarningsEnabled=1
+WarnLogOnly=1
+UseTrigger=1
+TriggerName=main
+LimitSize=0
+ByteLimit=50
+[CallStack]
+ShowArgs=0
+[Disassembly]
+MixedMode=1
+[JLinkDriver]
+CStepIntDis=_ 0
+[LMIFTDI]
+LMIFTDIserialNo=0E210027
+LMIFTDIfoundProbes=
+[LMIFTDIDriver]
+LMI_ResetMode=0x00000000
+[Breakpoints]
+Bp0=_ "STD_CODE" "{$PROJ_DIR$\src\main.c}.154.1" 1 0 0 0 "" 0 ""
+Bp1=_ "STD_CODE" "{$PROJ_DIR$\src\main.c}.154.1" 1 0 0 0 "" 0 ""
+Bp2=_ "STD_CODE" "{$PROJ_DIR$\src\main.c}.154.1" 1 0 0 0 "" 0 ""
+Bp3=_ "STD_CODE" "{$PROJ_DIR$\src\main.c}.154.9" 1 0 0 0 "" 0 ""
+Bp4=_ "STD_CODE" "{$PROJ_DIR$\src\main.c}.237.5" 1 0 0 0 "" 0 ""
+Bp5=_ "STD_CODE" "{$PROJ_DIR$\src\Iot_Lcd.c}.56.5" 1 0 0 0 "" 0 ""
+Bp6=_ "STD_CODE" "{$PROJ_DIR$\src\main.c}.77.3" 1 0 0 0 "" 0 ""
+Count=7
+[struct_types]
+Fmt0=STRU_DEV_STATUS-u16CO2	4	0
+Fmt1=STRU_DEV_STATUS-u16FanPwm	4	0
+Fmt2=STRU_DEV_STATUS-u16FanSpeed	4	0
+Fmt3=STRU_DEV_STATUS-u16Humidity	4	0
+Fmt4=STRU_DEV_STATUS-u16IndoorTemp	4	0
+Fmt5=STRU_DEV_STATUS-u16OutdoorTemp	4	0
+Fmt6=STRU_DEV_STATUS-u16PM25	4	0
+Fmt7=STRU_DEV_STATUS-u32SmartVerison	4	0
+Fmt8=STRU_SMART_STRATEGY-u16DevReportTime	3	0
+Fmt9=STRU_SMART_STRATEGY-u16FanPwmSmartTimeInterval	3	0
+Fmt10=STRU_SMART_STRATEGY-u16PM25SmartDelayOffTime	3	0
+Fmt11=STRU_SMART_STRATEGY-u16PM25SmartDelayOnTime	3	0
+Fmt12=STRU_SMART_STRATEGY-u16PM25SmartLevel	3	0
+Fmt13=STRU_SMART_STRATEGY-u32SmartVerison	4	0
+[array_types]
+Fmt0=u32[100]	4	0
+Fmt1=u8[200]	4	0
+[watch_formats]
+Fmt0={W}1:UartBase	4	0
+[Disassemble mode]
+mode=0
+[Breakpoints2]
+Bp0=_ 0 "EMUL_CODE" "{$PROJ_DIR$\src\startup_ewarm.c}.315.5" 0 0 1 "" 0 "" 0
+Bp1=_ 0 "EMUL_CODE" "{C:\Windows\system32}.138.27" 0 0 1 "" 0 "" 0
+Bp2=_ 0 "EMUL_CODE" "{$PROJ_DIR$\src\ac\ac_hal.c}.163.5" 0 0 1 "" 0 "" 0
+Bp3=_ 1 "EMUL_CODE" "{$PROJ_DIR$\src\Iot_T6603.c}.98.1" 0 0 1 "" 0 "" 0
+Bp4=_ 1 "EMUL_CODE" "{$PROJ_DIR$\src\ac\ac_hal.c}.266.9" 0 0 1 "" 0 "" 0
+Bp5=_ 1 "EMUL_CODE" "{$PROJ_DIR$\src\ac\ac_hal.c}.271.9" 0 0 1 "" 0 "" 0
+Bp6=_ 1 "EMUL_CODE" "{$PROJ_DIR$\src\ac\ac_hal.c}.278.9" 0 0 1 "" 0 "" 0
+Bp7=_ 1 "EMUL_CODE" "{$PROJ_DIR$\src\ac\ac_hal.c}.289.9" 0 0 1 "" 0 "" 0
+Bp8=_ 1 "EMUL_CODE" "{$PROJ_DIR$\src\Iot_Fan.c}.45.9" 0 0 1 "" 0 "" 0
+Bp9=_ 1 "EMUL_CODE" "{$PROJ_DIR$\src\Iot_Fan.c}.42.5" 0 0 1 "" 0 "" 0
+Count=10
+[Log file]
+LoggingEnabled=_ 0
+LogFile=_ ""
+Category=_ 0
+[TermIOLog]
+LoggingEnabled=_ 0
+LogFile=_ ""
+[Aliases]
+A0=_ "D:\Texas Instruments\TivaWare_C_Series-2.1.0.12573\driverlib\i2c.c" ""
+A1=_ "D:\workspace\ARM\AbleCloudDemo_0319\AbleCloudDemo\src\main.c" ""
+Count=2
+SuppressDialog=1
+[CallStackLog]
+Enabled=0
+[DriverProfiling]
+Enabled=0
+Mode=0
+Graph=0
+Symbiont=0
+Exclusions=

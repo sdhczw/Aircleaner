@@ -1,0 +1,711 @@
+###############################################################################
+#
+# IAR ELF Linker V7.30.1.7746/W32 for ARM                 10/Jun/2015  21:06:18
+# Copyright 2007-2014 IAR Systems AB.
+#
+#    Output file  =  
+#        D:\IOT\爱空气\新风机\project\AirMachine\ewarm\Exe\AirMachine.out
+#    Map file     =  
+#        D:\IOT\爱空气\新风机\project\AirMachine\ewarm\List\AirMachine.map
+#    Command line =  
+#        D:\IOT\爱空气\新风机\project\AirMachine\ewarm\Obj\ac_api.o
+#        D:\IOT\爱空气\新风机\project\AirMachine\ewarm\Obj\ac_common.o
+#        D:\IOT\爱空气\新风机\project\AirMachine\ewarm\Obj\ac_hal.o
+#        D:\IOT\爱空气\新风机\project\AirMachine\ewarm\Obj\crc.o
+#        D:\IOT\爱空气\新风机\project\AirMachine\ewarm\Obj\Iot_Fan.o
+#        D:\IOT\爱空气\新风机\project\AirMachine\ewarm\Obj\Iot_I2c.o
+#        D:\IOT\爱空气\新风机\project\AirMachine\ewarm\Obj\Iot_Key.o
+#        D:\IOT\爱空气\新风机\project\AirMachine\ewarm\Obj\Iot_Lcd.o
+#        D:\IOT\爱空气\新风机\project\AirMachine\ewarm\Obj\Iot_Ntc.o
+#        D:\IOT\爱空气\新风机\project\AirMachine\ewarm\Obj\Iot_Pm25.o
+#        D:\IOT\爱空气\新风机\project\AirMachine\ewarm\Obj\Iot_Pwm.o
+#        D:\IOT\爱空气\新风机\project\AirMachine\ewarm\Obj\Iot_Sht21.o
+#        D:\IOT\爱空气\新风机\project\AirMachine\ewarm\Obj\Iot_T6603.o
+#        D:\IOT\爱空气\新风机\project\AirMachine\ewarm\Obj\Iot_Timer.o
+#        D:\IOT\爱空气\新风机\project\AirMachine\ewarm\Obj\Iot_Uart.o
+#        D:\IOT\爱空气\新风机\project\AirMachine\ewarm\Obj\main.o
+#        D:\IOT\爱空气\新风机\project\AirMachine\ewarm\Obj\startup_ewarm.o
+#        D:\IOT\爱空气\新风机\project\AirMachine\ewarm\Obj\uartstdio.o
+#        --redirect _Printf=_PrintfTiny --redirect _Scanf=_ScanfSmall -o
+#        D:\IOT\爱空气\新风机\project\AirMachine\ewarm\Exe\AirMachine.out --map
+#        D:\IOT\爱空气\新风机\project\AirMachine\ewarm\List\AirMachine.map
+#        --config D:\IOT\爱空气\新风机\project\AirMachine\AirMachine.icf
+#        --semihosting
+#        D:\IOT\爱空气\新风机\project\AirMachine\driverlib\ewarm\Exe\driverlib.a
+#        --entry __iar_program_start --vfe
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A1":  place at start of [0x00000000-0x0003ffff] { ro section .intvec };
+"P1":  place in [from 0x00000000 to 0x0003ffff] { ro };
+"P2":  place in [from 0x20000000 to 0x20007fff] { rw, block HEAP };
+
+  Section            Kind        Address    Size  Object
+  -------            ----        -------    ----  ------
+"A1":                                      0x26c
+  .intvec            const    0x00000000   0x26c  startup_ewarm.o [1]
+                            - 0x0000026c   0x26c
+
+"P1":                                     0x6194
+  .text              ro code  0x0000026c  0x1900  Iot_Lcd.o [1]
+  .text              ro code  0x00001b6c   0x148  interrupt.o [4]
+  .text              ro code  0x00001cb4    0x82  i2c.o [4]
+  .text              ro code  0x00001d36    0x2e  copy_init3.o [6]
+  .text              ro code  0x00001d64   0x220  sysctl.o [4]
+  .text              ro code  0x00001f84   0x31c  gpio.o [4]
+  .text              ro code  0x000022a0    0x66  ABImemset.o [6]
+  .text              ro code  0x00002306    0x22  zero_init3.o [6]
+  .text              ro code  0x00002328    0x10  cpu.o [4]
+  .text              ro code  0x00002338   0xeb0  Iot_Uart.o [1]
+  .text              ro code  0x000031e8    0xee  uart.o [4]
+  .text              ro code  0x000032d8   0x2dc  uartstdio.o [1]
+  .text              ro code  0x000035b4   0x3be  ac_api.o [1]
+  .text              ro code  0x00003974   0x156  ac_common.o [1]
+  .text              ro code  0x00003acc    0x76  ABImemcpy_unaligned.o [6]
+  .text              ro code  0x00003b42    0x58  crc.o [1]
+  .text              ro code  0x00003b9c   0x748  ac_hal.o [1]
+  .text              ro code  0x000042e4    0x1e  U64Shr.o [6]
+  .text              ro code  0x00004304    0x22  I64Shl.o [6]
+  .text              ro code  0x00004328     0x6  ABImemclr4.o [6]
+  .text              ro code  0x00004330    0xd0  Iot_Pwm.o [1]
+  .text              ro code  0x00004400   0x12c  Iot_Fan.o [1]
+  .text              ro code  0x0000452c   0x384  Iot_Pm25.o [1]
+  .text              ro code  0x000048b0   0x32c  Iot_T6603.o [1]
+  .text              ro code  0x00004bdc    0x60  Iot_Sht21.o [1]
+  .text              ro code  0x00004c3c   0x1d0  Iot_Ntc.o [1]
+  .text              ro code  0x00004e0c   0x124  main.o [1]
+  .text              ro code  0x00004f30   0x174  eeprom.o [4]
+  .text              ro code  0x000050a4    0xac  Iot_Key.o [1]
+  .text              ro code  0x00005150   0x4ac  Iot_Timer.o [1]
+  .text              ro code  0x000055fc    0x32  ABImemset48.o [6]
+  .text              ro code  0x00005630    0xf0  timer.o [4]
+  .text              ro code  0x00005720   0x1cc  Iot_I2c.o [1]
+  .text              ro code  0x000058ec   0x156  adc.o [4]
+  .text              ro code  0x00005a44    0x4e  FltToDbl.o [5]
+  .text              ro code  0x00005a94   0x1a2  DblMul.o [5]
+  .text              ro code  0x00005c38    0xe8  DblAdd.o [5]
+  .text              ro code  0x00005d20    0x2c  DblToI32.o [5]
+  .text              ro code  0x00005d4c   0x16c  DblSub.o [5]
+  .rodata            const    0x00005eb8    0x28  Iot_Fan.o [1]
+  .text              ro code  0x00005ee0    0x28  data_init.o [6]
+  .rodata            const    0x00005f08    0x24  ac_api.o [1]
+  .text              ro code  0x00005f2c    0x22  fpinit_M.o [5]
+  .iar.init_table    const    0x00005f50    0x24  - Linker created -
+  .rodata            const    0x00005f74    0x20  Iot_Fan.o [1]
+  .rodata            const    0x00005f94    0x20  Iot_Fan.o [1]
+  .text              ro code  0x00005fb4    0x1e  startup_ewarm.o [1]
+  .text              ro code  0x00005fd2     0xc  cstartup_M.o [6]
+  .text              ro code  0x00005fe0    0x1a  cmain.o [6]
+  .text              ro code  0x00005ffa     0x4  low_level_init.o [3]
+  .text              ro code  0x00005ffe     0x4  exit.o [3]
+  .text              ro code  0x00006004     0xa  cexit.o [6]
+  .text              ro code  0x00006010    0x14  exit.o [7]
+  .rodata            const    0x00006024    0x1c  ac_hal.o [1]
+  .rodata            const    0x00006040    0x1c  Iot_Pm25.o [1]
+  .rodata            const    0x0000605c    0x18  Iot_Pm25.o [1]
+  .rodata            const    0x00006074    0x18  Iot_Pm25.o [1]
+  .rodata            const    0x0000608c    0x18  Iot_Pm25.o [1]
+  .rodata            const    0x000060a4    0x18  Iot_Pm25.o [1]
+  .rodata            const    0x000060bc    0x18  Iot_T6603.o [1]
+  .rodata            const    0x000060d4    0x18  Iot_Timer.o [1]
+  .rodata            const    0x000060ec    0x18  main.o [1]
+  .rodata            const    0x00006104    0x14  ac_hal.o [1]
+  .rodata            const    0x00006118    0x14  ac_hal.o [1]
+  .rodata            const    0x0000612c    0x14  ac_hal.o [1]
+  .rodata            const    0x00006140    0x14  Iot_Pm25.o [1]
+  .rodata            const    0x00006154    0x14  Iot_T6603.o [1]
+  .rodata            const    0x00006168    0x14  Iot_T6603.o [1]
+  .rodata            const    0x0000617c    0x14  Iot_T6603.o [1]
+  .rodata            const    0x00006190    0x14  Iot_T6603.o [1]
+  .rodata            const    0x000061a4    0x14  uartstdio.o [1]
+  .rodata            const    0x000061b8    0x10  ac_hal.o [1]
+  .rodata            const    0x000061c8    0x10  ac_hal.o [1]
+  .rodata            const    0x000061d8    0x10  ac_hal.o [1]
+  .rodata            const    0x000061e8    0x10  ac_hal.o [1]
+  .rodata            const    0x000061f8    0x10  Iot_Timer.o [1]
+  .rodata            const    0x00006208     0xc  ac_hal.o [1]
+  .rodata            const    0x00006214     0xc  Iot_Fan.o [1]
+  .rodata            const    0x00006220     0xc  Iot_Fan.o [1]
+  .rodata            const    0x0000622c     0xc  Iot_Pm25.o [1]
+  .rodata            const    0x00006238     0xc  uartstdio.o [1]
+  .rodata            const    0x00006244     0xc  uartstdio.o [1]
+  .rodata            const    0x00006250     0x8  ac_hal.o [1]
+  .rodata            const    0x00006258     0x8  Iot_T6603.o [1]
+  .rodata            const    0x00006260     0x8  uartstdio.o [1]
+  .rodata            const    0x00006268     0x4  ac_hal.o [1]
+  .rodata            const    0x0000626c     0x4  Iot_T6603.o [1]
+  .rodata            const    0x00006270     0x4  uartstdio.o [1]
+  .rodata            const    0x00006274     0x0  zero_init3.o [6]
+  .rodata            const    0x00006274     0x0  copy_init3.o [6]
+  Initializer bytes  ro data  0x00006274   0x18c  <for P2 s0> (used: 0x188)
+                            - 0x00006400  0x6194
+
+"P2":                                     0x1e64
+  P2 s0                       0x20000000   0x188  <Init block>
+    .data            inited   0x20000000    0x8c  Iot_Ntc.o [1]
+    .data            inited   0x2000008c    0x70  ac_hal.o [1]
+    .data            inited   0x200000fc    0x24  ac_hal.o [1]
+    .data            inited   0x20000120    0x10  ac_hal.o [1]
+    .data            inited   0x20000130     0x8  ac_hal.o [1]
+    .data            inited   0x20000138     0x8  ac_hal.o [1]
+    .data            inited   0x20000140     0x8  Iot_Uart.o [1]
+    .data            inited   0x20000148     0x8  Iot_Uart.o [1]
+    .data            inited   0x20000150     0x8  Iot_Uart.o [1]
+    .data            inited   0x20000158     0x4  ac_hal.o [1]
+    .data            inited   0x2000015c     0x4  ac_hal.o [1]
+    .data            inited   0x20000160     0x4  Iot_Timer.o [1]
+    .data            inited   0x20000164     0x4  Iot_Timer.o [1]
+    .data            inited   0x20000168     0x4  Iot_Timer.o [1]
+    .data            inited   0x2000016c     0x4  Iot_Uart.o [1]
+    .data            inited   0x20000170     0x2  Iot_Ntc.o [1]
+    .data            inited   0x20000172     0x2  Iot_Pm25.o [1]
+    .data            inited   0x20000174     0x2  Iot_Sht21.o [1]
+    .data            inited   0x20000176     0x2  Iot_Sht21.o [1]
+    .data            inited   0x20000178     0x2  Iot_Uart.o [1]
+    .data            inited   0x2000017a     0x2  Iot_Uart.o [1]
+    .data            inited   0x2000017c     0x2  Iot_Uart.o [1]
+    .data            inited   0x2000017e     0x1  Iot_Ntc.o [1]
+    .data            inited   0x2000017f     0x1  Iot_Sht21.o [1]
+    .data            inited   0x20000180     0x1  Iot_T6603.o [1]
+    .data            inited   0x20000181     0x1  Iot_T6603.o [1]
+    .data            inited   0x20000182     0x1  Iot_T6603.o [1]
+    .data            inited   0x20000183     0x1  Iot_Timer.o [1]
+    .data            inited   0x20000184     0x1  main.o [1]
+  .bss               zero     0x20000188   0x4b0  Iot_Pm25.o [1]
+  .bss               zero     0x20000638   0x4b0  Iot_T6603.o [1]
+  .bss               zero     0x20000ae8   0x400  Iot_Uart.o [1]
+  .bss               zero     0x20000ee8   0x400  Iot_Uart.o [1]
+  .bss               zero     0x200012e8   0x400  Iot_Uart.o [1]
+  .bss               zero     0x200016e8    0xc8  ac_api.o [1]
+  .bss               zero     0x200017b0    0xb0  ac_hal.o [1]
+  .bss               zero     0x20001860    0x94  Iot_Pm25.o [1]
+  .bss               zero     0x200018f4    0x94  Iot_T6603.o [1]
+  .bss               zero     0x20001988    0x94  Iot_Uart.o [1]
+  .bss               zero     0x20001a1c    0x94  Iot_Uart.o [1]
+  .bss               zero     0x20001ab0    0x8c  ac_api.o [1]
+  .bss               zero     0x20001b3c    0x78  Iot_Timer.o [1]
+  .bss               zero     0x20001bb4    0x20  Iot_Pm25.o [1]
+  .bss               zero     0x20001bd4    0x18  ac_hal.o [1]
+  .bss               zero     0x20001bec    0x18  Iot_Lcd.o [1]
+  .bss               zero     0x20001c04     0x8  Iot_T6603.o [1]
+  .bss               zero     0x20001c0c     0x4  ac_hal.o [1]
+  .bss               zero     0x20001c10     0x4  ac_hal.o [1]
+  .bss               zero     0x20001c14     0x4  ac_hal.o [1]
+  .bss               zero     0x20001c18     0x4  Iot_Fan.o [1]
+  .bss               zero     0x20001c1c     0x4  Iot_Key.o [1]
+  .bss               zero     0x20001c20     0x4  Iot_T6603.o [1]
+  .bss               zero     0x20001c24     0x4  Iot_T6603.o [1]
+  .bss               zero     0x20001c28     0x4  Iot_T6603.o [1]
+  .bss               zero     0x20001c2c     0x4  Iot_Timer.o [1]
+  .bss               zero     0x20001c30     0x4  Iot_Timer.o [1]
+  .bss               zero     0x20001c34     0x4  uartstdio.o [1]
+  .bss               zero     0x20001c38     0x2  Iot_Pm25.o [1]
+  .bss               zero     0x20001c3a     0x2  Iot_Pm25.o [1]
+  .bss               zero     0x20001c3c     0x2  Iot_Pm25.o [1]
+  .bss               zero     0x20001c3e     0x2  Iot_Pm25.o [1]
+  .bss               zero     0x20001c40     0x2  Iot_T6603.o [1]
+  .bss               zero     0x20001c42     0x2  Iot_T6603.o [1]
+  .bss               zero     0x20001c44     0x2  Iot_T6603.o [1]
+  .bss               zero     0x20001c46     0x2  Iot_Timer.o [1]
+  .bss               zero     0x20001c48     0x2  Iot_Uart.o [1]
+  .bss               zero     0x20001c4a     0x2  Iot_Uart.o [1]
+  .bss               zero     0x20001c4c     0x1  Iot_Fan.o [1]
+  .bss               zero     0x20001c4d     0x1  Iot_Fan.o [1]
+  .bss               zero     0x20001c4e     0x1  Iot_Pm25.o [1]
+  .bss               zero     0x20001c4f     0x1  Iot_Pm25.o [1]
+  .bss               zero     0x20001c50     0x1  Iot_Pm25.o [1]
+  .bss               zero     0x20001c51     0x1  Iot_T6603.o [1]
+  .bss               zero     0x20001c52     0x1  Iot_T6603.o [1]
+  .bss               zero     0x20001c53     0x1  Iot_Timer.o [1]
+  .bss               zero     0x20001c54     0x1  Iot_Timer.o [1]
+  .bss               zero     0x20001c55     0x1  Iot_Timer.o [1]
+  .bss               zero     0x20001c56     0x1  Iot_Timer.o [1]
+  .bss               zero     0x20001c57     0x1  Iot_Timer.o [1]
+  .bss               zero     0x20001c58     0x1  Iot_Timer.o [1]
+  .bss               zero     0x20001c59     0x1  Iot_Timer.o [1]
+  .bss               zero     0x20001c5a     0x1  Iot_Uart.o [1]
+  .bss               zero     0x20001c5b     0x1  Iot_Uart.o [1]
+  .bss               zero     0x20001c5c     0x1  Iot_Uart.o [1]
+  .bss               zero     0x20001c5d     0x1  Iot_Uart.o [1]
+  .bss               zero     0x20001c5e     0x1  Iot_Uart.o [1]
+  .bss               zero     0x20001c5f     0x1  Iot_Uart.o [1]
+  .bss               zero     0x20001c60     0x1  Iot_Uart.o [1]
+  .bss               zero     0x20001c61     0x1  main.o [1]
+  .noinit            uninit   0x20001c64   0x200  startup_ewarm.o [1]
+                            - 0x20001e64  0x1e64
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address     Size
+          -------     ----
+Zero (__iar_zero_init3)
+    1 destination range, total size 0x1ada:
+          0x20000188  0x1ada
+
+Copy (__iar_copy_init3)
+    1 source range, total size 0x18c (101% of destination):
+          0x00006274   0x18c
+    1 destination range, total size 0x185:
+          0x20000000   0x185
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module                 ro code  ro data  rw data
+    ------                 -------  -------  -------
+D:\IOT\爱空气\新风机\project\AirMachine\ewarm\Obj: [1]
+    Iot_Fan.o                  300      128        6
+    Iot_I2c.o                  460
+    Iot_Key.o                  172                 4
+    Iot_Lcd.o                6 400                24
+    Iot_Ntc.o                  464      143      143
+    Iot_Pm25.o                 900      158    1 393
+    Iot_Pwm.o                  208
+    Iot_Sht21.o                 96        5        5
+    Iot_T6603.o                812      119    1 379
+    Iot_Timer.o              1 196       53      150
+    Iot_Uart.o               3 760       34    3 413
+    ac_api.o                   958       36      340
+    ac_common.o                342
+    ac_hal.o                 1 864      364      400
+    crc.o                       88
+    main.o                     292       25        2
+    startup_ewarm.o             30      620      512
+    uartstdio.o                732       56        4
+    ------------------------------------------------
+    Total:                  19 074    1 741    7 775
+
+command line: [2]
+    ------------------------------------------------
+    Total:
+
+dl7M_tln.a: [3]
+    exit.o                       4
+    low_level_init.o             4
+    ------------------------------------------------
+    Total:                       8
+
+driverlib.a: [4]
+    adc.o                      342
+    cpu.o                       16
+    eeprom.o                   372
+    gpio.o                     796
+    i2c.o                      130
+    interrupt.o                328
+    sysctl.o                   544
+    timer.o                    240
+    uart.o                     238
+    ------------------------------------------------
+    Total:                   3 006
+
+m7M_tlv.a: [5]
+    DblAdd.o                   232
+    DblMul.o                   418
+    DblSub.o                   364
+    DblToI32.o                  44
+    FltToDbl.o                  78
+    fpinit_M.o                  34
+    ------------------------------------------------
+    Total:                   1 170
+
+rt7M_tl.a: [6]
+    ABImemclr4.o                 6
+    ABImemcpy_unaligned.o      118
+    ABImemset.o                102
+    ABImemset48.o               50
+    I64Shl.o                    34
+    U64Shr.o                    30
+    cexit.o                     10
+    cmain.o                     26
+    copy_init3.o                46
+    cstartup_M.o                12
+    data_init.o                 40
+    zero_init3.o                34
+    ------------------------------------------------
+    Total:                     508
+
+shb_l.a: [7]
+    exit.o                      20
+    ------------------------------------------------
+    Total:                      20
+
+    Gaps                        28        2        2
+    Linker created                       43
+----------------------------------------------------
+    Grand Total:            23 814    1 786    7 777
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                      Address   Size  Type      Object
+-----                      -------   ----  ----      ------
+?main                   0x00005fe1         Code  Gb  cmain.o [6]
+AC_BuildMessage         0x0000366d   0x9c  Code  Gb  ac_api.o [1]
+AC_BuildOption          0x000035b5   0xb8  Code  Gb  ac_api.o [1]
+AC_CheckCrc             0x0000388d   0x46  Code  Gb  ac_api.o [1]
+AC_ConfigWifi           0x00003e89   0xd4  Code  Gb  ac_hal.o [1]
+AC_DealDevStatusReq     0x00003cb3   0xa4  Code  Gb  ac_hal.o [1]
+AC_DealEvent            0x00004085   0x44  Code  Gb  ac_hal.o [1]
+AC_DealFan              0x000040df   0x6a  Code  Gb  ac_hal.o [1]
+AC_DealNotifyMessage    0x00003f89   0xc8  Code  Gb  ac_hal.o [1]
+AC_DealOtaMessage       0x0000406b   0x1a  Code  Gb  ac_hal.o [1]
+AC_GetStoreStatus       0x00004149   0x80  Code  Gb  ac_hal.o [1]
+AC_HtoNl                0x00003995   0x26  Code  Gb  ac_common.o [1]
+AC_HtoNlu64             0x00003a15   0xb6  Code  Gb  ac_common.o [1]
+AC_HtoNs                0x000039e1   0x1a  Code  Gb  ac_common.o [1]
+AC_HwInit               0x000041c9   0x30  Code  Gb  ac_hal.o [1]
+AC_Init                 0x00003e7b    0xe  Code  Gb  ac_hal.o [1]
+AC_JumpToBootLoader     0x00004051   0x1a  Code  Gb  ac_hal.o [1]
+AC_NtoHl                0x000039bb   0x26  Code  Gb  ac_common.o [1]
+AC_NtoHs                0x000039fb   0x1a  Code  Gb  ac_common.o [1]
+AC_ParseOption          0x0000381d   0x70  Code  Gb  ac_api.o [1]
+AC_ReadEEROM            0x00003e1f   0x5c  Code  Gb  ac_hal.o [1]
+AC_RecvMessage          0x000038ed   0x86  Code  Gb  ac_api.o [1]
+AC_ResetWifi            0x00003c49   0x6a  Code  Gb  ac_hal.o [1]
+AC_SendAckMsg           0x000037c1   0x2e  Code  Gb  ac_api.o [1]
+AC_SendDevStatus2Server
+                        0x00003b9d   0xac  Code  Gb  ac_hal.o [1]
+AC_SendDeviceRegsiter   0x00003737   0x8a  Code  Gb  ac_api.o [1]
+AC_SendDeviceStart      0x00003709   0x2e  Code  Gb  ac_api.o [1]
+AC_SendMessage          0x00003f5d   0x2c  Code  Gb  ac_hal.o [1]
+AC_SendRestMsg          0x000037ef   0x2e  Code  Gb  ac_api.o [1]
+AC_StoreStatus          0x000040c9   0x16  Code  Gb  ac_hal.o [1]
+AC_SwInit               0x000041f9   0x4a  Code  Gb  ac_hal.o [1]
+AC_UpdateSmartStrategyReq
+                        0x00003d57   0xc8  Code  Gb  ac_hal.o [1]
+AC_checkCPUendian       0x00003975   0x1a  Code  Gb  ac_common.o [1]
+ADCIntClear             0x00005917    0xa  Code  Gb  adc.o [4]
+ADCIntStatus            0x000058ed   0x2a  Code  Gb  adc.o [4]
+ADCProcessorTrigger     0x00005a1d   0x1c  Code  Gb  adc.o [4]
+ADCSequenceConfigure    0x0000592b   0x48  Code  Gb  adc.o [4]
+ADCSequenceDataGet      0x000059ff   0x1e  Code  Gb  adc.o [4]
+ADCSequenceEnable       0x00005921    0xa  Code  Gb  adc.o [4]
+ADCSequenceStepConfigure
+                        0x00005973   0x76  Code  Gb  adc.o [4]
+ATCmdPrefix             0x2000016c    0x4  Data  Gb  Iot_Uart.o [1]
+CPUcpsid                0x00002329    0x8  Code  Gb  cpu.o [4]
+CPUcpsie                0x00002331    0x8  Code  Gb  cpu.o [4]
+CheckSum                0x000045c7   0x1c  Code  Gb  Iot_Pm25.o [1]
+ClockInit               0x00004e0d   0x16  Code  Gb  main.o [1]
+Co2Init                 0x00004b5f   0x12  Code  Gb  Iot_T6603.o [1]
+Co2SmartDelayIntHandler
+                        0x000048cb   0x94  Code  Gb  Iot_T6603.o [1]
+Co2SmartDelayTimerInit  0x000053af   0x3c  Code  Gb  Iot_Timer.o [1]
+Co2SmartDelayTimerStart
+                        0x000053f7   0x28  Code  Gb  Iot_Timer.o [1]
+Co2SmartDelayTimerStop  0x000053eb    0xc  Code  Gb  Iot_Timer.o [1]
+ConfigureADC0           0x00004c3d   0x8c  Code  Gb  Iot_Ntc.o [1]
+ConfigureFanPWM         0x00004331   0x5e  Code  Gb  Iot_Pwm.o [1]
+ConfigureI2C0Master     0x00005721   0x40  Code  Gb  Iot_I2c.o [1]
+ConfigureLCD            0x00000357   0x70  Code  Gb  Iot_Lcd.o [1]
+ConfigureUART0          0x00002339   0x72  Code  Gb  Iot_Uart.o [1]
+ConfigureUART1          0x000023ab   0xa6  Code  Gb  Iot_Uart.o [1]
+ConfigureUART3          0x00002451   0x88  Code  Gb  Iot_Uart.o [1]
+ConfigureUART5          0x000024d9   0x88  Code  Gb  Iot_Uart.o [1]
+ConfigureUART7          0x00002561   0x88  Code  Gb  Iot_Uart.o [1]
+ConvertWTimer0EdgeValue
+                        0x000048b1   0x1a  Code  Gb  Iot_T6603.o [1]
+EEPROMInit              0x00004f89   0x2a  Code  Gb  eeprom.o [4]
+EEPROMProgram           0x00004feb   0x98  Code  Gb  eeprom.o [4]
+EEPROMRead              0x00004fc1   0x2a  Code  Gb  eeprom.o [4]
+EdgeWTimer0Init         0x000054bd   0x6c  Code  Gb  Iot_Timer.o [1]
+EndTime                 0x20001c28    0x4  Data  Gb  Iot_T6603.o [1]
+FanCountIntHandler      0x000052b3   0x36  Code  Gb  Iot_Timer.o [1]
+FanCountTimerInit       0x00005371   0x3e  Code  Gb  Iot_Timer.o [1]
+FanFbHandler            0x00004401   0x40  Code  Gb  Iot_Fan.o [1]
+FanInit                 0x000044db   0x24  Code  Gb  Iot_Fan.o [1]
+FanSmartStart           0x000052e9   0x22  Code  Gb  Iot_Timer.o [1]
+FanSmartStop            0x0000530b   0x2c  Code  Gb  Iot_Timer.o [1]
+FaultISR                0x00005fcf    0x2  Code  Lc  startup_ewarm.o [1]
+GPIODirModeSet          0x00001f85   0x28  Code  Gb  gpio.o [4]
+GPIOIntClear            0x0000210d    0x6  Code  Gb  gpio.o [4]
+GPIOIntEnable           0x000020f7    0x6  Code  Gb  gpio.o [4]
+GPIOIntStatus           0x000020fd   0x10  Code  Gb  gpio.o [4]
+GPIOIntTypeSet          0x00001fad   0x4c  Code  Gb  gpio.o [4]
+GPIOPadConfigSet        0x00001ff9   0xfe  Code  Gb  gpio.o [4]
+GPIOPinConfigure        0x000021cd   0x38  Code  Gb  gpio.o [4]
+GPIOPinRead             0x00002113    0x6  Code  Gb  gpio.o [4]
+GPIOPinTypeADC          0x0000211f    0x4  Code  Gb  gpio.o [4]
+GPIOPinTypeGPIOInput    0x0000213d   0x14  Code  Gb  gpio.o [4]
+GPIOPinTypeGPIOOutput   0x00002151    0xa  Code  Gb  gpio.o [4]
+GPIOPinTypeI2C          0x0000216d   0x14  Code  Gb  gpio.o [4]
+GPIOPinTypeI2CSCL       0x00002181   0x14  Code  Gb  gpio.o [4]
+GPIOPinTypeTimer        0x00002195   0x14  Code  Gb  gpio.o [4]
+GPIOPinTypeUART         0x000021b1   0x14  Code  Gb  gpio.o [4]
+GPIOPinWrite            0x00002119    0x6  Code  Gb  gpio.o [4]
+GetCo2                  0x00004b59    0x6  Code  Gb  Iot_T6603.o [1]
+GetFanPwm               0x000043c1   0x26  Code  Gb  Iot_Pwm.o [1]
+GetFanSpeed             0x000044d5    0x6  Code  Gb  Iot_Fan.o [1]
+GetFanStatus            0x000044cf    0x6  Code  Gb  Iot_Fan.o [1]
+GetIndoorTempData       0x00004c0f    0x6  Code  Gb  Iot_Sht21.o [1]
+GetOutdoorTempData      0x00004de1    0x6  Code  Gb  Iot_Ntc.o [1]
+GetPM25                 0x00004845    0x6  Code  Gb  Iot_Pm25.o [1]
+GetRhData               0x00004c15    0x6  Code  Gb  Iot_Sht21.o [1]
+HR01DataPrefix          0x20000172    0x2  Data  Gb  Iot_Pm25.o [1]
+I2CMasterBusy           0x00001d1d    0xe  Code  Gb  i2c.o [4]
+I2CMasterControl        0x00001d2b    0x4  Code  Gb  i2c.o [4]
+I2CMasterDataGet        0x00001d33    0x4  Code  Gb  i2c.o [4]
+I2CMasterDataPut        0x00001d2f    0x4  Code  Gb  i2c.o [4]
+I2CMasterEnable         0x00001d09    0xc  Code  Gb  i2c.o [4]
+I2CMasterInitExpClk     0x00001cb5   0x42  Code  Gb  i2c.o [4]
+I2CMasterSlaveAddrSet   0x00001d15    0x8  Code  Gb  i2c.o [4]
+I2CWReadSHT21           0x00005761  0x13e  Code  Gb  Iot_I2c.o [1]
+IntDefaultHandler       0x00005fd1    0x2  Code  Lc  startup_ewarm.o [1]
+IntEnable               0x00001ba7   0x56  Code  Gb  interrupt.o [4]
+IntMasterDisable        0x00001b75    0x6  Code  Gb  interrupt.o [4]
+IntMasterEnable         0x00001b6d    0x8  Code  Gb  interrupt.o [4]
+IntPrioritySet          0x00001b83   0x24  Code  Gb  interrupt.o [4]
+KeyInit                 0x000050f9   0x44  Code  Gb  Iot_Key.o [1]
+KeyIntHandle            0x000050a5   0x54  Code  Gb  Iot_Key.o [1]
+LCDBackgroundOn         0x00001b29   0x24  Code  Gb  Iot_Lcd.o [1]
+LCDCo2Show              0x0000125d  0x59c  Code  Gb  Iot_Lcd.o [1]
+LCDDisplayShow          0x20001bec   0x18  Data  Gb  Iot_Lcd.o [1]
+LCDFanSpeedShow         0x000017fd  0x322  Code  Gb  Iot_Lcd.o [1]
+LCDIndoorTempShow       0x0000057d  0x326  Code  Gb  Iot_Lcd.o [1]
+LCDInit                 0x00001b5d   0x10  Code  Gb  Iot_Lcd.o [1]
+LCDOutdoorTempShow      0x000008a3  0x348  Code  Gb  Iot_Lcd.o [1]
+LCDPm25Show             0x00000ebd  0x392  Code  Gb  Iot_Lcd.o [1]
+LCDReadOneByte          0x000002cd   0x8a  Code  Gb  Iot_Lcd.o [1]
+LCDRhShow               0x00000beb  0x2c0  Code  Gb  Iot_Lcd.o [1]
+LCDShowAll              0x00000447   0xf2  Code  Gb  Iot_Lcd.o [1]
+LCDWifiShow             0x00000539   0x44  Code  Gb  Iot_Lcd.o [1]
+LCDWriteCmd             0x0000026d   0x60  Code  Gb  Iot_Lcd.o [1]
+LCDWriteOneByte         0x000003c7   0x80  Code  Gb  Iot_Lcd.o [1]
+NmiSR                   0x00005fcd    0x2  Code  Lc  startup_ewarm.o [1]
+NtcInit                 0x00004db7    0x8  Code  Gb  Iot_Ntc.o [1]
+PM25Init                0x00004833   0x12  Code  Gb  Iot_Pm25.o [1]
+PM25IntHandle           0x000045e3  0x212  Code  Gb  Iot_Pm25.o [1]
+PM25SetInit             0x00004803   0x30  Code  Gb  Iot_Pm25.o [1]
+PM25SetOn               0x000047f5    0xe  Code  Gb  Iot_Pm25.o [1]
+PWMInit                 0x0000438f    0xe  Code  Gb  Iot_Pwm.o [1]
+PeriodicTimerInit       0x00005337   0x3a  Code  Gb  Iot_Timer.o [1]
+Pm25PeroidMeasStop      0x0000548f    0xe  Code  Gb  Iot_Timer.o [1]
+Pm25SmartDelayIntHandler
+                        0x0000452d   0x9a  Code  Gb  Iot_Pm25.o [1]
+Pm25SmartDelayTimerStart
+                        0x00005467   0x28  Code  Gb  Iot_Timer.o [1]
+Pm25SmartDelayTimerStop
+                        0x0000545b    0xc  Code  Gb  Iot_Timer.o [1]
+Pm25TimerInit           0x0000541f   0x3c  Code  Gb  Iot_Timer.o [1]
+PrintCmdPrefix          0x20000148    0x8  Data  Gb  Iot_Uart.o [1]
+ProcessCo2Data          0x00004a81   0xc2  Code  Gb  Iot_T6603.o [1]
+ProcessNtcData          0x00004dbf   0x22  Code  Gb  Iot_Ntc.o [1]
+ProcessPeriodData       0x00004e9d   0x48  Code  Gb  main.o [1]
+ProcessPeriodReportData
+                        0x00005541   0x28  Code  Gb  Iot_Timer.o [1]
+ProcessSht21Data        0x00004bdd   0x32  Code  Gb  Iot_Sht21.o [1]
+ProcessWifiMsg          0x000030bd   0xbe  Code  Gb  Iot_Uart.o [1]
+PtcInit                 0x00004e7b   0x22  Code  Gb  main.o [1]
+PtcOff                  0x00004e5f   0x1c  Code  Gb  main.o [1]
+PtcOn                   0x00004e43   0x1c  Code  Gb  main.o [1]
+PureDataPrefix          0x20000150    0x8  Data  Gb  Iot_Uart.o [1]
+RTDebugLevel            0x20000184    0x1  Data  Gb  main.o [1]
+ReadIndoorTemp          0x000058d5    0xc  Code  Gb  Iot_I2c.o [1]
+ReadOutdoorTemp         0x00004d29   0x8e  Code  Gb  Iot_Ntc.o [1]
+ReadRH                  0x000058e1    0xc  Code  Gb  Iot_I2c.o [1]
+Region$$Table$$Base     0x00005f50          --   Gb  - Linker created -
+Region$$Table$$Limit    0x00005f74          --   Gb  - Linker created -
+ResetISR                0x00005fb5   0x14  Code  Gb  startup_ewarm.o [1]
+SendCo2Command          0x00004b43   0x16  Code  Gb  Iot_T6603.o [1]
+SetCo2ProcessOn         0x00004b71    0x8  Code  Gb  Iot_T6603.o [1]
+SetFanOnOff             0x00004491   0x3e  Code  Gb  Iot_Fan.o [1]
+SetFanPwmOut            0x0000439d   0x24  Code  Gb  Iot_Pwm.o [1]
+SetFanSpeed             0x00004441   0x50  Code  Gb  Iot_Fan.o [1]
+SetNtcMeasOn            0x00004de7    0x8  Code  Gb  Iot_Ntc.o [1]
+SetSht21MeasOn          0x00004c1b    0x8  Code  Gb  Iot_Sht21.o [1]
+Sht21Init               0x00004c31    0xc  Code  Gb  Iot_Sht21.o [1]
+Sleep                   0x00004e23   0x20  Code  Gb  main.o [1]
+StartTime               0x20001c24    0x4  Data  Gb  Iot_T6603.o [1]
+SysCtlClockGet          0x00001dc9  0x11a  Code  Gb  sysctl.o [4]
+SysCtlDelay             0x00001dc1    0x8  Code  Gb  sysctl.o [4]
+SysCtlPeripheralEnable  0x00001da5    0x8  Code  Gb  sysctl.o [4]
+SysCtlPeripheralReset   0x00001d65   0x40  Code  Gb  sysctl.o [4]
+T6603DataPrefix         0x20000180    0x1  Data  Gb  Iot_T6603.o [1]
+T6603IntHandle          0x000049d5   0xac  Code  Gb  Iot_T6603.o [1]
+Timer0AIntHandler       0x00005151  0x162  Code  Gb  Iot_Timer.o [1]
+TimerConfigure          0x00005649   0x52  Code  Gb  timer.o [4]
+TimerControlEvent       0x000056ad   0x14  Code  Gb  timer.o [4]
+TimerDisable            0x0000563d    0xc  Code  Gb  timer.o [4]
+TimerEnable             0x00005631    0xc  Code  Gb  timer.o [4]
+TimerInit               0x00005529   0x18  Code  Gb  Iot_Timer.o [1]
+TimerIntClear           0x0000571d    0x4  Code  Gb  timer.o [4]
+TimerIntEnable          0x0000570b    0x4  Code  Gb  timer.o [4]
+TimerLoadGet            0x000056d1    0xc  Code  Gb  timer.o [4]
+TimerLoadSet            0x000056c1   0x10  Code  Gb  timer.o [4]
+TimerLoadSet64          0x000056dd    0x6  Code  Gb  timer.o [4]
+TimerMatchGet           0x000056ff    0xc  Code  Gb  timer.o [4]
+TimerMatchSet           0x000056ef   0x10  Code  Gb  timer.o [4]
+TimerValueGet           0x000056e3    0xc  Code  Gb  timer.o [4]
+Timer_Init              0x0000549d   0x20  Code  Gb  Iot_Timer.o [1]
+UART1Port               0x20001988   0x94  Data  Gb  Iot_Uart.o [1]
+UART1RxBuf              0x20000ae8  0x400  Data  Gb  Iot_Uart.o [1]
+UART1_ISR               0x00002689  0x428  Code  Gb  Iot_Uart.o [1]
+UART3Port               0x20001a1c   0x94  Data  Gb  Iot_Uart.o [1]
+UART3RxBuf              0x20000ee8  0x400  Data  Gb  Iot_Uart.o [1]
+UART3_ISR               0x00002add  0x59e  Code  Gb  Iot_Uart.o [1]
+UART5Port               0x200018f4   0x94  Data  Gb  Iot_T6603.o [1]
+UART7Port               0x20001860   0x94  Data  Gb  Iot_Pm25.o [1]
+UARTBusy                0x000032b3    0xa  Code  Gb  uart.o [4]
+UARTCharGetNonBlocking  0x00003293   0x10  Code  Gb  uart.o [4]
+UARTCharPutNonBlocking  0x000032a3   0x10  Code  Gb  uart.o [4]
+UARTCharsAvail          0x0000327f    0x6  Code  Gb  uart.o [4]
+UARTClockSourceSet      0x000032d1    0x6  Code  Gb  uart.o [4]
+UARTConfigSetExpClk     0x000031ef   0x4c  Code  Gb  uart.o [4]
+UARTDisable             0x00003255   0x1e  Code  Gb  uart.o [4]
+UARTEnable              0x0000323b   0x1a  Code  Gb  uart.o [4]
+UARTFIFOLevelSet        0x000031e9    0x6  Code  Gb  uart.o [4]
+UARTIntClear            0x000032cd    0x4  Code  Gb  uart.o [4]
+UARTIntEnable           0x000032bd    0x6  Code  Gb  uart.o [4]
+UARTIntStatus           0x000032c3    0xa  Code  Gb  uart.o [4]
+UARTRx_Buf_Init         0x000025e9   0x24  Code  Gb  Iot_Uart.o [1]
+UARTSpaceAvail          0x00003285    0x4  Code  Gb  uart.o [4]
+UARTStdioConfig         0x000032d9   0x56  Code  Gb  uartstdio.o [1]
+UARTprintf              0x0000359d   0x18  Code  Gb  uartstdio.o [1]
+UARTvprintf             0x00003367  0x214  Code  Gb  uartstdio.o [1]
+UARTwrite               0x0000332f   0x38  Code  Gb  uartstdio.o [1]
+UartInit                0x0000260d   0x42  Code  Gb  Iot_Uart.o [1]
+UartSend                0x0000264f   0x3a  Code  Gb  Iot_Uart.o [1]
+WTimer0AHandler         0x0000495f   0x76  Code  Gb  Iot_T6603.o [1]
+WTimer0EdgeValue        0x20001c20    0x4  Data  Gb  Iot_T6603.o [1]
+ZADataPrefix            0x20000140    0x8  Data  Gb  Iot_Uart.o [1]
+_EEPROMSectorMaskClear  0x00004f5b   0x22  Code  Lc  eeprom.o [4]
+_EEPROMSectorMaskSet    0x00004f31   0x2a  Code  Lc  eeprom.o [4]
+__aeabi_d2uiz           0x00005d21         Code  Gb  DblToI32.o [5]
+__aeabi_dadd            0x00005c39         Code  Gb  DblAdd.o [5]
+__aeabi_dmul            0x00005a95         Code  Gb  DblMul.o [5]
+__aeabi_f2d             0x00005a45         Code  Gb  FltToDbl.o [5]
+__aeabi_llsl            0x00004305         Code  Gb  I64Shl.o [6]
+__aeabi_llsr            0x000042e5         Code  Gb  U64Shr.o [6]
+__aeabi_memclr4         0x00004329         Code  Gb  ABImemclr4.o [6]
+__aeabi_memset          0x000022a1         Code  Gb  ABImemset.o [6]
+__cmain                 0x00005fe1         Code  Gb  cmain.o [6]
+__exit                  0x00006011   0x14  Code  Gb  exit.o [7]
+__iar_Memset            0x000022a1         Code  Gb  ABImemset.o [6]
+__iar_Memset4_word      0x000055fd         Code  Gb  ABImemset48.o [6]
+__iar_Memset8_word      0x000055fd         Code  Gb  ABImemset48.o [6]
+__iar_Memset_word       0x000022a9         Code  Gb  ABImemset.o [6]
+__iar_copy_init3        0x00001d37   0x2e  Code  Gb  copy_init3.o [6]
+__iar_d2uiz             0x00005d2d         Code  Gb  DblToI32.o [5]
+__iar_dadd              0x00005c4d         Code  Gb  DblAdd.o [5]
+__iar_data_init3        0x00005ee1   0x28  Code  Gb  data_init.o [6]
+__iar_dsub              0x00005d4d         Code  Gb  DblSub.o [5]
+__iar_dsubStart         0x00005d5f         Code  Gb  DblSub.o [5]
+__iar_init_vfp          0x00005f2d         Code  Gb  fpinit_M.o [5]
+__iar_program_start     0x00005fd3         Code  Gb  cstartup_M.o [6]
+__iar_unaligned___aeabi_memcpy
+                        0x00003acd         Code  Gb  ABImemcpy_unaligned.o [6]
+__iar_unaligned___aeabi_memcpy4
+                        0x00003aed         Code  Gb  ABImemcpy_unaligned.o [6]
+__iar_unaligned___aeabi_memcpy8
+                        0x00003aed         Code  Gb  ABImemcpy_unaligned.o [6]
+__iar_zero_init3        0x00002307   0x22  Code  Gb  zero_init3.o [6]
+__low_level_init        0x00005ffb    0x4  Code  Gb  low_level_init.o [3]
+__vector_table          0x00000000  0x26c  Data  Gb  startup_ewarm.o [1]
+_call_main              0x00005fed         Code  Gb  cmain.o [6]
+_exit                   0x00006005         Code  Gb  cexit.o [6]
+_main                   0x00005ff7         Code  Gb  cmain.o [6]
+bsearch                 0x00004cc9   0x60  Code  Gb  Iot_Ntc.o [1]
+crc16_ccitt             0x00003b89   0x12  Code  Gb  crc.o [1]
+crc_cal_by_bit          0x00003b43   0x46  Code  Gb  crc.o [1]
+exit                    0x00005fff    0x4  Code  Gb  exit.o [3]
+g_ErrorRspBuffer        0x20000138    0x8  Data  Gb  ac_hal.o [1]
+g_OkRspBuffer           0x2000015c    0x4  Data  Gb  ac_hal.o [1]
+g_PM25WorkCnt           0x20001c3a    0x2  Data  Gb  Iot_Pm25.o [1]
+g_pcHex                 0x00006270    0x4  Data  Lc  uartstdio.o [1]
+g_pui32EnRegs           0x00001ca0   0x14  Data  Lc  interrupt.o [4]
+g_pui32GPIOBaseAddrs    0x00002210   0x90  Data  Lc  gpio.o [4]
+g_pui32Regs             0x00001c04   0x9c  Data  Lc  interrupt.o [4]
+g_pui32Xtals            0x00001f18   0x6c  Data  Lc  sysctl.o [4]
+g_struBspTimer          0x20001b3c   0x78  Data  Gb  Iot_Timer.o [1]
+g_struSmartStrategy     0x20001bd4   0x18  Data  Gb  ac_hal.o [1]
+g_u16Co2Data            0x20001c40    0x2  Data  Gb  Iot_T6603.o [1]
+g_u16Co2RecordData      0x20000638  0x4b0  Data  Gb  Iot_T6603.o [1]
+g_u16Co2RecordIndex     0x20001c42    0x2  Data  Gb  Iot_T6603.o [1]
+g_u16Co2SmartFlag       0x20001c44    0x2  Data  Gb  Iot_T6603.o [1]
+g_u16IndoorTEData       0x20000176    0x2  Data  Gb  Iot_Sht21.o [1]
+g_u16OutdoorTEData      0x20000170    0x2  Data  Gb  Iot_Ntc.o [1]
+g_u16OutdoorTETab       0x20000000   0x8c  Data  Gb  Iot_Ntc.o [1]
+g_u16PM25RecordData     0x20000188  0x4b0  Data  Gb  Iot_Pm25.o [1]
+g_u16PM25RecordIndex    0x20001c3c    0x2  Data  Gb  Iot_Pm25.o [1]
+g_u16PM25SmartFlag      0x20001c3e    0x2  Data  Gb  Iot_Pm25.o [1]
+g_u16RhData             0x20000174    0x2  Data  Gb  Iot_Sht21.o [1]
+g_u16Timer0APm25Counter
+                        0x20001c46    0x2  Data  Lc  Iot_Timer.o [1]
+g_u16pm25               0x20001c38    0x2  Data  Gb  Iot_Pm25.o [1]
+g_u32CloudStatus        0x20001c0c    0x4  Data  Gb  ac_hal.o [1]
+g_u32FanFbSpeed         0x20001c18    0x4  Data  Gb  Iot_Fan.o [1]
+g_u32PeriodicCo2        0x20000168    0x4  Data  Gb  Iot_Timer.o [1]
+g_u32PeriodicFanSmart   0x20001c30    0x4  Data  Gb  Iot_Timer.o [1]
+g_u32PeriodicNtc        0x20000164    0x4  Data  Gb  Iot_Timer.o [1]
+g_u32PeriodicSHT21      0x20000160    0x4  Data  Gb  Iot_Timer.o [1]
+g_u32Timer0AReportCounter
+                        0x20001c2c    0x4  Data  Lc  Iot_Timer.o [1]
+g_u32WifiDisConnectTimes
+                        0x20001c14    0x4  Data  Gb  ac_hal.o [1]
+g_u32WifiPowerStatus    0x20001c10    0x4  Data  Gb  ac_hal.o [1]
+g_u64Domain             0x20000130    0x8  Data  Gb  ac_hal.o [1]
+g_u8DeviceId            0x20000120   0x10  Data  Gb  ac_hal.o [1]
+g_u8EqVersion           0x20000158    0x4  Data  Gb  ac_hal.o [1]
+g_u8FanSpeed            0x20001c4c    0x1  Data  Gb  Iot_Fan.o [1]
+g_u8FanStatus           0x20001c4d    0x1  Data  Gb  Iot_Fan.o [1]
+g_u8ModuleKey           0x2000008c   0x70  Data  Gb  ac_hal.o [1]
+g_u8MsgBuildBuffer      0x200016e8   0xc8  Data  Gb  ac_api.o [1]
+g_u8PtcFlag             0x20001c61    0x1  Data  Gb  main.o [1]
+g_u8Timer0ACo2Counter   0x20001c56    0x1  Data  Lc  Iot_Timer.o [1]
+g_u8Timer0ADevReportFlag
+                        0x20001c59    0x1  Data  Lc  Iot_Timer.o [1]
+g_u8Timer0AFanCounter   0x20001c54    0x1  Data  Lc  Iot_Timer.o [1]
+g_u8Timer0AFanSmartFlag
+                        0x20001c57    0x1  Data  Lc  Iot_Timer.o [1]
+g_u8Timer0ANtcCounter   0x20001c55    0x1  Data  Lc  Iot_Timer.o [1]
+g_u8Timer0APm25PeroidFlag
+                        0x20001c58    0x1  Data  Lc  Iot_Timer.o [1]
+g_u8Timer0ASHT21Counter
+                        0x20001c53    0x1  Data  Lc  Iot_Timer.o [1]
+g_u8Timer0BNtcFlag      0x2000017e    0x1  Data  Gb  Iot_Ntc.o [1]
+g_u8Timer0BSHT21Flag    0x2000017f    0x1  Data  Gb  Iot_Sht21.o [1]
+g_u8TimerCo2Flag        0x20000182    0x1  Data  Gb  Iot_T6603.o [1]
+g_u8WifiPowerQueryFlag  0x20000183    0x1  Data  Lc  Iot_Timer.o [1]
+g_ui32Base              0x20001c34    0x4  Data  Lc  uartstdio.o [1]
+g_ui32UARTBase          0x00006238    0xc  Data  Lc  uartstdio.o [1]
+g_ui32UARTPeriph        0x00006244    0xc  Data  Lc  uartstdio.o [1]
+main                    0x00004ee5   0x2a  Code  Gb  main.o [1]
+pCmdWifiBuf             0x200012e8  0x400  Data  Gb  Iot_Uart.o [1]
+pui32Stack              0x20001c64  0x200  Data  Lc  startup_ewarm.o [1]
+temp                    0x20000181    0x1  Data  Gb  Iot_T6603.o [1]
+
+
+[1] = D:\IOT\爱空气\新风机\project\AirMachine\ewarm\Obj
+[2] = command line
+[3] = dl7M_tln.a
+[4] = driverlib.a
+[5] = m7M_tlv.a
+[6] = rt7M_tl.a
+[7] = shb_l.a
+
+  23 814 bytes of readonly  code memory
+   1 786 bytes of readonly  data memory
+   7 777 bytes of readwrite data memory
+
+Errors: none
+Warnings: none
